@@ -1,3 +1,4 @@
+# cook your dish here
 import copy
 import random
 unit_types = ["I", "M", "T", "L", "H", "A"]
@@ -140,6 +141,11 @@ rand_type2 = rand_types[1]
 for k in range(96): #6 groups dividing the 5 types equally to make up 2916 - 36 
     for i in range(1,6):
         not_I = not_I + [Unit(4, unit_types[i]) for j in range(6)]
+        
+print("Size of not_I", len(not_I))
+for u_type in unit_types:
+    print("Amount of ", u_type, " in not_I", len([member for member in not_I if(member.unit_type is u_type)]))
+
 
 #7.2I = 7.1I 7.1X 7.1X
 #7.1I = 7I 7I 7I
@@ -203,6 +209,7 @@ print("Random type number 1 is ", rand_type1)
 print("Random type number 2 is", rand_type2)
 for u_type in unit_types:
     print("Amount of ", u_type, " in squad", len([member for member in squad if(member.unit_type is u_type)]))
+
 exit_loop = False
 while True:
     print(squad)
