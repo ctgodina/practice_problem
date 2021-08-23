@@ -134,7 +134,8 @@ print(ranks)
 
 squad = []
 not_I = []
-rand_types = random.sample(unit_types, 2)
+type_not_I = [t for t in unit_types if (t is not "I")]
+rand_types = random.sample(type_not_I, 2)
 rand_type1 = rand_types[0]
 rand_type2 = rand_types[1]
 
